@@ -1,2 +1,2 @@
-page('/bedroomClean', bedroomCleanController.index);
-page();
+// page('/bedroomClean', bedroomCleanController.index);
+// page();
