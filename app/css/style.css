@@ -1,0 +1,27 @@
+form {
+  border-radius: 10px;
+  border-color: red;
+  border-style: dotted;
+}
+form p {
+  display: inline-block;;
+  padding: 5px;
+  margin-right: 1em;
+  margin-left: 1em;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+
+}
+
+select {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+span {
+  border-color: black;
+  border-bottom-style: solid;
+  border-image-width: 3px;
+
+}

@@ -9,12 +9,12 @@
   </head>
   <body>
     <main>
-      <button type="button" id="brclean" name="button"><a href="/bedroomClean">Bedroom cleanliness Form</a></button>
-      <button type="button" id="brCondition" name="button">BedroomCondition</button>
-      <button type="button" id="bathClean" name="button">BathroomCleanliness</button>
-      <button type="button" id="bathCon" name="button">BathroomCondition</button>
+      <button type="button" id="brClean" onclick="showForm" value"Bedroom Cleanliness"><a href"#bedroomClean">Bedroom cleanliness Form</a></button>
+      <button type="button" id="brCond" onclick="showForm" name="Bedroom Condition"><a href"#bedroomCondition">BedroomCondition</a></button>
+      <button type="button" id="bathClean" name="Bathroom Cleanliness"><a href"#bathroomClean">BathroomCleanliness</a></button>
+      <button type="button" id="bathCond" name="Bathroom Condition"><a href"bathroomCondition">BathroomCondition</a></button>
       <section id="bedroomClean">
-        <h1>test1</h1>
+        <h1>Bedroom Cleanliness</h1>
         <div class="bedroom-cleanliness-form">
         <form class="bedroom-cleanliness" onclick="updateSum()">
           <p>Room Smell</p>
@@ -137,17 +137,45 @@
         <h1>test4</h1>
       </section>
 
-      <div id="sum">
-        <h3>Total score goes here</h3>
+      <div>
+        <p>Bedroom Cleanliness score is <span id="sum"></span></p>
       </div>
     </main>
     <script type="text/javascript">
     $(document).ready(function(){
-    //   $('#bedroomCondition').hide();
-    //   $("#brClean").("button").click(function(){
-    //     $("#bathClean").hide();
-    //
-    // });
+      $('#bedroomClean').hide();
+      $('#bedroomCondition').hide();
+      $('#bathroomClean').hide();
+      $('#bathroomCondition').hide();
+
+      $('#brClean').on('click', function showForm(){
+        $('#bedroomClean').show();
+        $('#bedroomCondition').hide();
+        $('#bathroomClean').hide();
+        $('#bathroomCondition').hide();
+      });
+
+      $('#brCond').on('click', function showForm(){
+        $('#bedroomCondition').show();
+        $('#bedroomClean').hide();
+        $('#bathroomClean').hide();
+        $('#bathroomCondition').hide();
+      });
+
+      $('#bathCond').on('click', function showForm(){
+        $('#bathroomCondition').show();
+        $('#bedroomClean').hide();
+        $('#bedroomClean').hide();
+        $('#bathroomClean').hide();
+      });
+
+      $('#bathClean').on('click', function showForm(){
+        $('#bathroomClean').show();
+        $('#bedroomCondition').hide();
+        $('#bedroomClean').hide();
+        $('#bathroomClean').hide();
+      });
+
       $('select').change(function updateSum(){
         var sum = 0;
           $('select :selected').each(function() {
